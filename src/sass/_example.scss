@@ -1,0 +1,24 @@
+.search-wrapper {
+  background-color: #0000ff;
+  margin-top: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+}
+.search-form {
+  margin: auto;
+  position: relative;
+}
+
+.search-input {
+  width: 350px;
+  height: 30px;
+  font-size: 18px;
+}
+.search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 36px;
+  font-size: 18px;
+}
