@@ -1,6 +1,7 @@
 .search-wrapper {
   background-color: #0000ff;
   margin-top: 50px;
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
@@ -21,4 +22,37 @@
   top: 0;
   height: 36px;
   font-size: 18px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+}
+
+.photo-card {
+  margin-left: 20px;
+  flex-basis: calc(100% / 4 - 20px);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.gallery-img {
+  height: 80%;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+
+.info-item {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.3;
 }
