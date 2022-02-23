@@ -53,6 +53,7 @@ async function onLoadMore() {
         loadMoreBtn.disable();
         const pictures = await newApiService.fetchPictures();
         galleryBox.insertAdjacentHTML('beforeend', createGalleryTmp(pictures.hits));
+        smoothScroll();
         lightbox.refresh();
         loadMoreBtn.enable();
     }
@@ -65,4 +66,15 @@ function onFetchError() {
     Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
     galleryBox.innerHTML = '';
     searchForm.reset();
+}
+
+function smoothScroll() { 
+    const { height: cardHeight } = document
+    .querySelector('.gallery')
+    .firstElementChild.getBoundingClientRect();
+
+    window.scrollBy({
+    top: cardHeight * 2,
+    behavior: 'smooth',
+});
 }
