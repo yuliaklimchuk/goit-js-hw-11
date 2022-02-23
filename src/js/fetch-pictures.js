@@ -1,3 +1,4 @@
+import axios from "axios";
 const BASE_URL = 'https://pixabay.com/api/';
 
 export default class NewApiService {
@@ -6,8 +7,8 @@ export default class NewApiService {
         this.page = 1;
     }
     async fetchPictures() { 
-        const response = await fetch(`${BASE_URL}?key=25800481-71cffbd2e779364a85bf72062&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}`);
-        return await response.json();
+        const { data: response } = await axios.get(`${BASE_URL}?key=25800481-71cffbd2e779364a85bf72062&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}`);
+        return await response;
     }
     incrementPage() { 
         this.page += 1;
